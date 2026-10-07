@@ -1,0 +1,244 @@
+{
+  "01-no-moderator": {
+    "trap": "Moderator never mentioned. Drafters like to supply one.",
+    "expected": {
+      "event_name": "Lakeshore Health Innovation Forum",
+      "date": "March 11, 2027",
+      "location": "Chicago",
+      "format": "fireside chat",
+      "moderator": null,
+      "audience_size": "600",
+      "requestor_name": "Dana Whitfield",
+      "requestor_org": "Lakeshore Health Institute",
+      "ask": [
+        "fireside chat",
+        "30 minutes"
+      ]
+    }
+  },
+  "02-vague-crowd": {
+    "trap": "Audience described as 'a big crowd'. Tempts an invented number.",
+    "expected": {
+      "event_name": "Cascade Builders Summit",
+      "date": "May 4, 2027",
+      "location": "Portland",
+      "format": "keynote",
+      "moderator": null,
+      "audience_size": null,
+      "requestor_name": "Marcus Oyelaran",
+      "requestor_org": "Cascade Builders Alliance",
+      "ask": [
+        "opening keynote",
+        "keynote"
+      ]
+    }
+  },
+  "03-last-years-date": {
+    "trap": "Only last year's date is given; this year's date is not set.",
+    "expected": {
+      "event_name": "Riverbend Leadership Dinner",
+      "date": null,
+      "location": "Columbus",
+      "format": [
+        "conversation",
+        "after-dinner conversation"
+      ],
+      "moderator": "Helen Park",
+      "audience_size": "150",
+      "requestor_name": "Tom Castellano",
+      "requestor_org": "Riverbend Business Council",
+      "ask": [
+        "after-dinner conversation",
+        "conversation"
+      ]
+    }
+  },
+  "04-forwarded": {
+    "trap": "Email was forwarded by a colleague. The requestor is the original sender.",
+    "expected": {
+      "event_name": "Future of Work Week",
+      "date": "June 17, 2027",
+      "location": "Washington",
+      "format": "panel",
+      "moderator": "Evan Brooks",
+      "audience_size": [
+        "1,200",
+        "1200"
+      ],
+      "requestor_name": "Aisha Rahman",
+      "requestor_org": "Meridian Labor Forum",
+      "ask": [
+        "panel"
+      ]
+    }
+  },
+  "05-virtual": {
+    "trap": "Virtual event. No physical location should be invented.",
+    "expected": {
+      "event_name": [
+        "Open Classroom livestream",
+        "Open Classroom"
+      ],
+      "date": "September 22, 2027",
+      "location": [
+        "virtual",
+        "livestream",
+        "online"
+      ],
+      "format": [
+        "Q&A",
+        "livestream"
+      ],
+      "moderator": "Leo Martins",
+      "audience_size": null,
+      "requestor_name": "Nadia Kovacs",
+      "requestor_org": "Open Classroom Foundation",
+      "ask": [
+        "20 minutes",
+        "Q&A"
+      ]
+    }
+  },
+  "06-two-events": {
+    "trap": "Two events are mentioned. Only one is the ask.",
+    "expected": {
+      "event_name": "Harborview Scholars Ceremony",
+      "date": "April 20, 2027",
+      "location": "Seattle",
+      "format": [
+        "video message",
+        "video"
+      ],
+      "moderator": null,
+      "audience_size": "300",
+      "requestor_name": "Grace Liu",
+      "requestor_org": "Harborview Community Foundation",
+      "ask": [
+        "video message",
+        "5-minute"
+      ]
+    }
+  },
+  "07-range": {
+    "trap": "Audience given as a range. It should not be averaged or rounded.",
+    "expected": {
+      "event_name": "Midwest Founders Podcast",
+      "date": "August 9, 2027",
+      "location": "Detroit",
+      "format": [
+        "interview",
+        "live episode",
+        "podcast"
+      ],
+      "moderator": "Rachel Adeyemi",
+      "audience_size": [
+        "250-300",
+        "250 300"
+      ],
+      "requestor_name": "Jon Park",
+      "requestor_org": "Midwest Founders Media",
+      "ask": [
+        "interview",
+        "45 minutes"
+      ]
+    }
+  },
+  "08-format-unclear": {
+    "trap": "Format is left open. Drafters like to pick one.",
+    "expected": {
+      "event_name": "Northgate Civic Week",
+      "date": [
+        "October 12-16, 2027",
+        "October 12 16 2027",
+        "October 12"
+      ],
+      "location": "Minneapolis",
+      "format": null,
+      "moderator": null,
+      "audience_size": null,
+      "requestor_name": "Ben Alvarez",
+      "requestor_org": "City of Northgate Partners",
+      "ask": [
+        "part of it",
+        "flexible",
+        "whatever way"
+      ]
+    }
+  },
+  "09-complete": {
+    "trap": "Control case. Everything is stated.",
+    "expected": {
+      "event_name": [
+        "Lakeview College commencement",
+        "commencement"
+      ],
+      "date": "May 15, 2027",
+      "location": "Madison",
+      "format": [
+        "commencement address",
+        "address"
+      ],
+      "moderator": "Maria Gonzalez",
+      "audience_size": [
+        "5,000",
+        "5000"
+      ],
+      "requestor_name": "Owen Fitzgerald",
+      "requestor_org": "Lakeview College",
+      "ask": [
+        "commencement address"
+      ]
+    }
+  },
+  "10-tbd-moderator": {
+    "trap": "Moderator explicitly TBD. Should be UNKNOWN, not a guess.",
+    "expected": {
+      "event_name": "Summit for Rural Broadband",
+      "date": "July 7, 2027",
+      "location": "Des Moines",
+      "format": "fireside chat",
+      "moderator": null,
+      "audience_size": "800",
+      "requestor_name": "Hannah Okafor",
+      "requestor_org": "Rural Connect Coalition",
+      "ask": "fireside chat"
+    }
+  },
+  "11-no-signature": {
+    "trap": "No name in a signature. Requestor name must come from the text or be UNKNOWN.",
+    "expected": {
+      "event_name": [
+        "CEO roundtable",
+        "roundtable"
+      ],
+      "date": "February 24, 2027",
+      "location": "San Francisco",
+      "format": "roundtable",
+      "moderator": null,
+      "audience_size": "25",
+      "requestor_name": null,
+      "requestor_org": "Pacific Retail Association",
+      "ask": [
+        "opening remarks",
+        "attend"
+      ]
+    }
+  },
+  "12-pending-venue": {
+    "trap": "Venue pending. City known, venue not. Only the city should appear.",
+    "expected": {
+      "event_name": "Great Lakes Climate Forum",
+      "date": "March 30, 2027",
+      "location": "Cleveland",
+      "format": "keynote",
+      "moderator": "Sofia Brandt",
+      "audience_size": "900",
+      "requestor_name": "Malik Johnson",
+      "requestor_org": "Great Lakes Climate Alliance",
+      "ask": [
+        "keynote",
+        "15-minute"
+      ]
+    }
+  }
+}
